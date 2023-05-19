@@ -1,0 +1,255 @@
+.hero {
+    background-color: var(--backgroundColor);
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 15%;
+    margin-right: 15%;
+    gap: 20%;
+}
+
+.animation{
+    min-width: 400px;
+    width: 700px;
+}
+
+.heroTextAnimation {
+    white-space: nowrap;
+    color: var(--textWhite);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 3rem;
+}
+
+.heroText {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+}
+
+.bold {
+    color: var(--textWhite);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    transition: ease-in 0.3s;
+    
+}
+
+.bold:hover {
+    color: var(--buttonBlue);
+    transition: ease-in 0.3s;
+}
+
+.heroNameText {
+    display: flex;
+}
+
+.heroLearnMore {
+    color: var(--accentGreen);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1rem;
+    font-weight: 900;
+    transition: ease-in 0.3s;
+}
+
+.heroButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    padding: 30px;
+
+}
+
+.heroLearnMoreIcon {
+    margin-top: 5px;
+    cursor: pointer;
+    border-radius: 50px;
+    color: var(--accentGreen);
+    transition: ease-in 0.3s;
+    padding: 2px 20px;
+}
+
+.heroLearnMoreIcon:hover {
+    background-color: var(--textWhite);
+    color: black;
+    transition: ease-in 0.3s;
+}
+
+.heroProjectsButton {
+    cursor: pointer;
+    margin-top: 10px;
+    color: black;
+    background-color: var(--accentGreen);
+    padding: 10px; 
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 900;
+    border-radius: 15px;
+    text-align: center;
+    width: 150px;
+    transition: ease-in-out 0.3s;
+}
+
+.heroProjectsButton:hover {
+    transition: ease-in-out 0.3s;
+    background-color: var(--textWhite);
+}
+
+.heroResumeButton {
+    cursor: pointer;
+    margin-top: 10px;
+    color: rgb(255, 255, 255);
+    background-color: var(--secondaryBlack);
+    padding: 10px; 
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 900;
+    border-radius: 15px;
+    text-align: center;
+    width: 200px;
+    transition: ease-in-out 0.3s;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+
+.heroResumeButton:hover {
+    background-color: var(--buttonBlue);
+    transition: ease-in-out 0.3s;
+    color: black;
+}
+
+
+
+
+.heroButtons{
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    flex-flow: row wrap;
+}
+
+.heroBottom {
+    margin-left: 15%;
+    bottom: 0;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.heroJob {
+    font-size: 1.3rem;
+    color: white;
+    font-weight: 900;
+}
+
+.heroJobIcon {
+    color: white;
+    margin-left: -3px;
+}
+
+.heroLocation {
+    color: white;
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: end;
+    font-size: 1.1rem;
+}
+
+.heroSocialsContainer {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+    
+}
+
+.heroSocialsLinkedin, .heroSocialsGithub, .heroSocialsTwitter, .heroSocialsInstagram {
+    cursor: pointer;
+    color: white;
+    transition: ease-in-out 0.3s;
+    border-radius: 10px;
+}
+
+.heroSocialsLinkedin:hover {
+    color: #0072b1;
+    transition: ease-in-out 0.3s;
+}
+
+.heroSocialsInstagram:hover {
+color: #962fbf  ;
+    transition: ease-in-out 0.3s;
+    
+}
+
+.heroSocialsTwitter:hover {
+    color: #00acee;
+    transition: ease-in-out 0.3s;
+}
+
+.heroSocialsGithub:hover {
+    color: rgb(0, 85, 0);
+    transition: ease-in-out 0.3s;
+}
+
+@media (max-width: 1700px) {
+    .hero-container {
+        padding-top: 50px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .hero-container {
+        gap: 5%;
+    }
+
+}
+
+@media (max-width: 1000px) {
+    .animation {
+        display: none;
+    }
+
+    .heroText{
+        align-items: center;
+        gap: 30px;
+    }
+
+    .hero-container {
+        flex-direction: column;
+    }
+
+    .heroBottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 100px 0 0 0;
+    }
+    
+}
+
+@media (max-width: 450px) {
+    .heroTextAnimation, .bold {
+        font-size: 2rem;
+    }
+
+    .bold {
+        color: var(--buttonBlue);
+    }
+
+    .heroButtons {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .heroButton {
+        margin-top: 50px;
+    }
+}
+
+

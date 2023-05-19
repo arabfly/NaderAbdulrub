@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Odia:wght@100;200;300;400;500;600;700;800&family=Exo+2:wght@100;200;300;400;500;600;700;800;900&family=Monoton&family=Space+Grotesk:wght@300;400;500;600;700&family=Tourney:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+/* FONTS
+font-family: 'Anek Odia', sans-serif;
+font-family: 'Exo 2', sans-serif;
+font-family: 'Monoton', cursive;
+font-family: 'Space Grotesk', sans-serif;
+font-family: 'Tourney', cursive;
+*/
+:root {
+    --backgroundColor: #0e0f12;
+    --buttonBlue: #0094ff;
+    --secondaryBlack: #1a1d21;
+    --accentGreen: #1fbf75;
+    --textWhite: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    width: 75px;
+    cursor: pointer;
+}
+
+
+.text
+{
+  font-size: 2.5rem;
+  font-weight: 900;
+  position: relative;
+  border-radius: 15px;
+  color: #ffffff; 
+}
+
+.text::before
+{
+  content: attr(data-text);
+  position: absolute;
+  color: var(--backgroundColor);
+  width: 0;
+  overflow: hidden;
+  transition: 0.6s;
+  border-radius: 15px;
+}
+
+.nav-title::before
+{
+  content: "";
+  width: 0%;
+  border-radius: 15px;
+  height: 100%;
+  position: absolute;
+  background: var(--buttonBlue);
+  right: 0;
+  top: 0;
+  transition: 0.5s;
+}
+
+.nav-title:hover .text::before,.nav-title:hover::before
+{
+  width: 100%;
+}
+
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10vw;
+    background-color: var(--backgroundColor);
+    
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    height: 100%;
+}
+
+
+nav > ul > li > a {
+    display: flex;
+}
+
+
+
+.nav-links > li {
+    font-family: 'Space Grotesk', sans-serif;
+    display: flex;
+    align-items: center;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--textWhite);
+    padding-left: 40px;
+}
+
+.nav-links > li > a{
+    padding: 10px 10px 10px 10px;
+    border-bottom: solid 1px transparent;
+    border-radius: 10px;
+    transition: ease-in-out 0.3s;
+}
+
+.nav-links > li > a:hover{
+    background-color: var(--buttonBlue);
+    padding: 10px 10px 10px 10px;
+    color: var(--secondaryBlack);
+    border-radius: 10px;
+    transition: ease-in-out 0.3s;
+}
+
+.nav-title {
+    color: var(--textWhite);
+    font-family: 'Tourney', cursive;    font-size: 1.7rem;
+    font-weight: 900;
+    position: relative;
+    display: inline-block;
+    padding: 0 40px;
+    cursor: pointer;
+}
+
+.menu-icon {
+    display: none;
+}
+
+.nav-title > p {
+    font-weight: 900;
+}
+
+.nav-title > h1 {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    position: relative;
+    letter-spacing: 5px;
+
+}
+
+
+.html-tags {
+    color: var(--buttonBlue);
+    font-weight: 400;
+    font-size: 1.3rem;
+}
+
+
+
+@media (max-width: 1000px) {
+
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 70vh;
+        position: absolute;
+        top: 100px;
+        left: -100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+      }
+
+      .nav-links > li > a{
+        margin: 40px;
+        border-bottom: solid 1px transparent;
+        border-radius: 10px;
+        transition: ease-in-out 0.3s;
+    }
+    
+    .nav-links > li {
+        padding-left: 0;
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+    }
+
+
+
+    .nav-links.active {
+        background: #242222;
+        left: 0;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 1;
+    }
+
+    .menu-icon {
+        display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-size: 1.8rem;
+      padding: 40px 15vw;
+      cursor: pointer;
+      color: var(--textWhite);
+    }
+
+
+}
+
+
