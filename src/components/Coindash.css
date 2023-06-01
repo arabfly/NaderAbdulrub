@@ -1,0 +1,175 @@
+.projectContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6vw;
+}
+
+/*PROJECT IMAGES*/
+.coindashImg {
+    min-width: 400px;
+    width: 40%;
+}
+
+.coindashLogo {
+    width: 50px;
+    padding-bottom: 15px;
+}
+
+.coindashIphone {
+    display: none;
+}
+/*PROJECT IMAGES*/
+
+/*PROJECT GAPS & WIDTH FOR MAIN SECTION*/
+.projectSpacer {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+    width: 700px;
+}
+
+/*PROJECT GAPS FOR MAIN SECTION*/
+
+/*PROJECT TITLE*/
+.projectHeader {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+.projectTitle {
+    color: white;
+    font-size: 2em;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+/*PROJECT TITLE*/
+
+
+/* PROJECT DESCRIPTION */
+.projectDescription {
+    font-size: 1.5em;
+    color: #f47952;
+    font-weight: 500;
+}
+
+.projectList > li {
+    list-style: '⤷ ';
+    list-style-position: outside;
+    color: var(--textWhite);
+    font-size: 1.2em;
+    padding: 10px 0px;
+    margin-left: 10px;
+}
+
+.projectList > li::before {
+    content: '';
+}
+
+/* PROJECT DESCRIPTION*/
+
+
+/*PROJECT BUTTONS*/
+.projectButtons {
+    display: flex;
+    gap: 50px;
+}
+
+
+.projectCode {
+    color: var(--textWhite);
+    background-color: #f47952;
+    font-size: 1.2em;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 900;
+    width: 175px;
+    transition: all 0.3s;
+}
+
+.projectCode:hover {
+    background-color: var(--backgroundColor);
+    color: var(--textWhite);
+
+}
+
+.projectDemo {
+    color: var(--backgroundColor);
+    background-color: var(--textWhite);
+    font-size: 1.2em;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 900;
+    width: 150px;
+    transition: all 0.3s;
+}
+
+.projectDemo:hover {
+    background-color: var(--backgroundColor);
+    color: var(--textWhite);
+
+}
+
+/*PROJECT BUTTONS*/
+
+.projectTransition {
+    transition: ease-in 100ms;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+@media (max-width:1150px)  {
+    .coindashIphone {
+        min-width: 50%;
+        display: flex;
+    }
+
+    .coindashImg {
+        display: none;
+    }
+
+}
+
+@media (max-width:1000px) {
+    
+    .projectList {
+        display: none;
+    }
+
+    .projectContainer {
+        flex-direction: column-reverse;
+
+    }
+
+    .projectSpacer {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .projectTitle {
+        font-size: 1.5em;
+    }
+
+    .projectDescription {
+        font-size: 1em;
+    }
+
+    .projectButtons {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .coindashIphone {
+        min-width: 300px;
+    }
+}
+
+
+

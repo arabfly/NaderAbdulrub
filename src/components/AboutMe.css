@@ -1,19 +1,26 @@
-.aboutmeContainer {
-    font-family: 'Space Grotesk', sans-serif;
-    background-color: var(--backgroundColor);
-}
+
 
 .aboutme {
     display: flex;
     flex-direction: column;
     gap: 50px;
-    margin: 0  15%;
+    
 }
 
 .aboutmeTextContainer {
+    position: relative;
+    background-color: var(--secondaryBlack);
     display: flex;
-
+    flex-direction: row;
+    overflow: hidden;
+    gap: 100px;
+    height: 100%;
+    padding: 5vw 10vw;
+    align-items: center;
+    justify-content: center;
 }
+
+
 
 .aboutmeText {
     display: flex;
@@ -22,11 +29,129 @@
     gap: 40px;
     color: white;
     padding-right: 0px;
+    width: 100%;
 
 }
 
-.aboutmeImage {
-    width: 4000px;
+
+.showAboutMeImage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 50%;
+}
+
+@keyframes FromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+.hideList {
+    transform: translateX(-100%);
+    opacity: 0;
+    filter: blur(5px);
+}
+
+.showList {
+    transform: translateX(0);
+    opacity: 1;
+    filter: blur(0);
+    transition: all 500ms;
+    transition-delay: 500ms;
+}
+
+.hideList2 {
+    transform: translateX(-100%);
+    opacity: 0;
+    filter: blur(5px);
+}
+
+.showList2 {
+    transform: translateX(0);
+    opacity: 1;
+    filter: blur(0);
+    transition: all 500ms;
+    transition-delay: 600ms;
+}
+
+.hideList3 {
+    transform: translateX(-100%);
+    opacity: 0;
+    filter: blur(5px);
+}
+
+.showList3 {
+    transform: translateX(0);
+    opacity: 1;
+    filter: blur(0);
+    transition: all 500ms;
+    transition-delay: 700ms;
+}
+
+.hideList4 {
+    transform: translateX(-100%);
+    opacity: 0;
+    filter: blur(5px);
+}
+
+.showList4 {
+    transform: translateX(0);
+    opacity: 1;
+    filter: blur(0);
+    transition: all 500ms;
+    transition-delay: 800ms;
+}
+
+.myImage {
+    position: relative;
+    width: 600px;
+    max-width: 900px;
+    margin-left: 150px;
+    margin-top: 100px;
+    opacity: 0;
+}
+
+.showMyImage {
+    position: relative;
+    width: 600px;
+    max-width: 900px;
+    opacity: 1;
+    animation: FromRight 500ms linear;
+
+}
+
+.blob {
+    position: absolute;
+    width: 500px;
+    top: -300px;
+    right: -300px;
+
+}
+
+.blob2 {
+    position: absolute;
+    width: 500px;
+    bottom: -300px;
+    left: -200px;
+    transform: rotate(90deg);
+}
+
+.pattern {
+    position: absolute;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+    border: 0;
+    width: 100%;
 }
 
 .aboutmeTitle {
@@ -35,7 +160,7 @@
     font-size: 2rem;
     font-weight: 900;
     letter-spacing: 3px;
-    width: 220px;
+    width: fit-content;
 }
 
 .aboutmeTitle:after {
@@ -51,3 +176,35 @@
     background-repeat: round;
     background-position: 0em;
   }
+
+  .list > li {
+    font-size: 1.1em;
+  }
+
+li::before {
+    content: "→";
+    padding-right: 10px;
+    color: var(--accentGreen);
+    transform: translateX(-100%);
+    left: 0px;
+    position: absolute;
+  }
+
+  @media (max-width:1360px) {
+    .aboutmeTextContainer {
+        flex-direction: column;
+        padding: 50px 30px;
+    }
+
+    .aboutmeText {
+        width: 100%;
+        align-items: center;
+    }
+  }
+
+  @media (max-width:800px) {
+    .showAboutMeImage {
+        display: none;
+    }
+  }
+

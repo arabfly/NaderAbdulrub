@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Anek+Odia:wght@100;200;300;400;500;600;700;800&family=Exo+2:wght@100;200;300;400;500;600;700;800;900&family=Monoton&family=Space+Grotesk:wght@300;400;500;600;700&family=Tourney:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap');
 
 /* FONTS
 font-family: 'Anek Odia', sans-serif;
@@ -7,20 +7,9 @@ font-family: 'Exo 2', sans-serif;
 font-family: 'Monoton', cursive;
 font-family: 'Space Grotesk', sans-serif;
 font-family: 'Tourney', cursive;
+font-family: 'Squada One', cursive;
 */
-:root {
-    --backgroundColor: #0e0f12;
-    --buttonBlue: #0094ff;
-    --secondaryBlack: #1a1d21;
-    --accentGreen: #1fbf75;
-    --textWhite: #ffffff;
-}
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
 
 .logo {
     width: 75px;
@@ -34,7 +23,9 @@ font-family: 'Tourney', cursive;
   font-weight: 900;
   position: relative;
   border-radius: 15px;
-  color: #ffffff; 
+  color: var(--textWhite); 
+  font-family: 'Squada One', cursive;
+  letter-spacing: 10px;
 }
 
 .text::before
@@ -72,7 +63,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 10vw;
+    margin: 20px 6vw 0 6vw;
     background-color: var(--backgroundColor);
     
 }
@@ -83,6 +74,7 @@ header {
     text-decoration: none;
     padding: 0.5rem 1rem;
     height: 100%;
+    color: white;
 }
 
 
@@ -93,7 +85,7 @@ nav > ul > li > a {
 
 
 .nav-links > li {
-    font-family: 'Space Grotesk', sans-serif;
+    
     display: flex;
     align-items: center;
     display: inline-block;
@@ -141,7 +133,7 @@ nav > ul > li > a {
     flex-direction: row; 
     align-items: center;
     position: relative;
-    letter-spacing: 5px;
+    letter-spacing: 0.3em;
 
 }
 
@@ -169,6 +161,26 @@ nav > ul > li > a {
         transition: all 0.5s ease;
       }
 
+         .nav-links > li > a:hover{
+        background-color: none;
+        width: 0;
+        border-radius: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: ease-in-out 0.3s;
+    }
+      .nav-links > li:hover{
+        background-color: var(--buttonBlue);
+        width: 100%;
+        color: var(--secondaryBlack);
+        border-radius: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: ease-in-out 0.3s;
+    }
+
       .nav-links > li > a{
         margin: 40px;
         border-bottom: solid 1px transparent;
@@ -188,7 +200,7 @@ nav > ul > li > a {
 
 
     .nav-links.active {
-        background: #242222;
+        background: var(--secondaryBlack);
         left: 0;
         opacity: 1;
         transition: all 0.5s ease;

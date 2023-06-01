@@ -3,6 +3,10 @@ import Contact from "./components/Contact";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import AboutMe from "./components/AboutMe";
+import Footer from "./components/Footer";
+import { Projects } from "./components/Projects";
+import "./App.css";
+import TechStack from "./components/TechStack";
 
 function App() {
   return (
@@ -13,9 +17,12 @@ function App() {
       </div>
       <main>
         <AboutMe />
+        <TechStack />
+        <Projects />
+        <Contact />
       </main>
       <footer>
-        
+        <Footer />
       </footer>
     </div>
   );

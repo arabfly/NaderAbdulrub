@@ -1,5 +1,4 @@
 import { React, useState } from "react";
-import Logo from "./logo.png";
 import { FaTimes } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import "./Navbar.css";
@@ -21,8 +20,8 @@ const Navbar = () => {
   return (
     <header>
       <span class="nav-title">
-        <div class="text" data-text="Nader">
-          Nader
+        <div class="text" data-text="NADER">
+          NADER
         </div>
       </span>
       <div className="menu-icon" onClick={() => setClick(!click)}>

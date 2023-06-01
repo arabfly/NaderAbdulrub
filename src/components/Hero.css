@@ -1,14 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/*font-family: 'Advent Pro', sans-serif;*/
+
 .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: var(--backgroundColor);
 }
 
-.hero-container {
+.heroInfoCardsContainer {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    margin-left: 15%;
-    margin-right: 15%;
-    gap: 20%;
+    justify-content: center;
+    gap: 50px;
+    margin-left: 50px;
+    margin-top: 100px;
+}
+
+.CardTitle {
+    font-size: 1.5em;
+    color: var(--textWhite);
+    font-weight: bold;
+}
+
+.heroTechButton {
+    color: var(--textWhite);
+    font-size: .9em;
+    background: linear-gradient(90deg, var(--accentGreen) 0%, var(--buttonBlue) 100%);
+    padding: 5px;
+    width: 90px;
+    height: 30px;
+    border-radius: 10px;
+    font-weight: 600;
+    
+}
+
+.heroProject {
+    cursor: pointer;
+    background-color: var(--secondaryBlack);
+    padding: 10px;
+    color: var(--textWhite);
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 5px;
+
+}
+
+.heroProjectTitle {
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.heroProjectDescription {
+    font-size: .75em;
+
+}
+
+.heroProjectTitle::after {
+    content: '→';
+    color: var(--buttonBlue);
+    margin-left: 10px;
+    
+
+}
+
+.heroProjectButton {
+    width: 90px;
+    height: 30px;
+    font-size: .9em;
+    color: var(--textWhite);
+    background: var(--backgroundColor);
+    padding: 5px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.CardIcons {
+    cursor: pointer;
+    display: flex;
+    gap: 30px;
+}
+
+.CardIcon {
+    width: 30px;
+}
+
+.heroCollege {
+    color: var(--textWhite);
+    font-weight: bold;
+    letter-spacing: 1px;
+    
+}
+
+.heroDegree {
+    color: var(--textWhite);
+    font-size: .75em;
+}
+
+.heroMajor {
+    color: var(--textWhite);
+    font-size: 0.75em;
+
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+    gap: 7vw;
 }
 
 .animation{
@@ -18,16 +119,76 @@
 
 .heroTextAnimation {
     white-space: nowrap;
+    background-image: linear-gradient(-90deg, var(--textWhite) 0%, var(--accentGreen) 50%, var(--buttonBlue) 100%);
+    font-family: 'Advent Pro', sans-serif;
+    font-size: 4rem;
+    letter-spacing: 0.1em;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.heroJobText {
     color: var(--textWhite);
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 3rem;
+    font-size: 2em;
+    font-family: 'Advent Pro', sans-serif;
+    font-weight: 600;
+    margin-bottom: 30px;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.showJob {
+    color: var(--textWhite);
+    font-size: 2em;
+    font-family: 'Advent Pro', sans-serif;
+    font-weight: 600;
+    margin-bottom: 30px;
+    transition: all 1s;
+    filter: blur(0);
+    transform: translateX(0);
+    transition-delay: 100ms ;
+    opacity: 1;
+}
+
+.showButtons {
+    transition: all 1s;
+    transform: translateX(0);
+    opacity: 1;
+    transition-delay: 200ms ;
+    filter: blur(0);
+}
+
+.hideButtons {
+    transform: translateX(-100%);
+    opacity: 0;
+    filter: blur(5px);
+}
+
+.heroNameContainer {
+    filter: blur(5px);
+    transform: translateX(-100%);
+    margin-bottom: 30px;
+    opacity: 0;
+}
+
+.showFadeIn {
+    transition: all 1s;
+    filter: blur(0);
+    transform: translateX(0);
+    margin-bottom: 30px;
+    opacity: 1;
+
 }
 
 .heroText {
+    margin-top: 75px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: start;
-    gap: 15px;
+    gap: 100px;
+
 }
 
 .bold {
@@ -42,6 +203,13 @@
 .bold:hover {
     color: var(--buttonBlue);
     transition: ease-in 0.3s;
+}
+
+.me {
+    width: 100%;
+    min-width: 280px;
+    max-width: 450px;
+    
 }
 
 .heroNameText {
@@ -77,22 +245,23 @@
 
 .heroLearnMoreIcon:hover {
     background-color: var(--textWhite);
-    color: black;
+    color: var(--backgroundColor);
     transition: ease-in 0.3s;
 }
 
 .heroProjectsButton {
     cursor: pointer;
     margin-top: 10px;
-    color: black;
-    background-color: var(--accentGreen);
+    color: var(--textWhite);
+    background-color: var(--buttonBlue);
     padding: 10px; 
     font-family: 'Space Grotesk', sans-serif;
     font-weight: 900;
     border-radius: 15px;
     text-align: center;
-    width: 150px;
+    width: 200px;
     transition: ease-in-out 0.3s;
+    margin-bottom: 30px;
 }
 
 .heroProjectsButton:hover {
@@ -110,7 +279,7 @@
     font-weight: 900;
     border-radius: 15px;
     text-align: center;
-    width: 200px;
+    width: 250px;
     transition: ease-in-out 0.3s;
     display: flex;
     justify-content: center;
@@ -135,24 +304,89 @@
 }
 
 .heroBottom {
-    margin-left: 15%;
-    bottom: 0;
     font-family: 'Space Grotesk', sans-serif;
+    background-color: var(--secondaryBlack);
+    padding: 30px;
+    width: 325px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 10px;
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(100%);
+}
+
+.showHeroBottom {
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: var(--secondaryBlack);
+    padding: 30px;
+    width: 325px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 10px;
+    transition: all 1s;
+    filter: blur(0px);
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hideCard {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(100%);
+}
+
+.showCard {
+    transition: all 1s;
+    filter: blur(0px);
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.projectsShowCard {
+    transition: all 1s;
+    transition-delay: 300ms;
+    filter: blur(0px);
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.educationShowCard {
+    transition: all 1s;
+    transition-delay: 500ms;
+    filter: blur(0px);
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+.heroLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .heroJob {
     font-size: 1.3rem;
-    color: white;
+    color: var(--textWhite);
     font-weight: 900;
 }
 
 .heroJobIcon {
-    color: white;
+    color: var(--textWhite);
     margin-left: -3px;
 }
 
 .heroLocation {
-    color: white;
+    color: var(--textWhite);
     margin-top: 10px;
     display: flex;
     gap: 10px;
@@ -162,14 +396,14 @@
 
 .heroSocialsContainer {
     display: flex;
-    gap: 30px;
+    gap: 35px;
     margin-top: 20px;
     
 }
 
 .heroSocialsLinkedin, .heroSocialsGithub, .heroSocialsTwitter, .heroSocialsInstagram {
     cursor: pointer;
-    color: white;
+    color: var(--textWhite);
     transition: ease-in-out 0.3s;
     border-radius: 10px;
 }
@@ -195,46 +429,77 @@ color: #962fbf  ;
     transition: ease-in-out 0.3s;
 }
 
-@media (max-width: 1700px) {
-    .hero-container {
-        padding-top: 50px;
+.heroMiddleContainer {
+    opacity: 0;
+}
+
+.showMiddleContainer {
+    opacity: 1;
+    animation: ZoomIn 1s; 
+}
+
+@keyframes ZoomIn {
+    0% {
+        transform: scale(0);
+        opacity: 0.5;
+        filter: blur(5px);
+    }
+    100% {
+        transform: scale(1.0);
+        opacity: 1;
+        filter: blur(0);
     }
 }
 
-@media (max-width: 1400px) {
-    .hero-container {
-        gap: 5%;
-    }
 
-}
-
-@media (max-width: 1000px) {
-    .animation {
+@media (max-width: 1100px) {
+    .heroInfoCardsContainer {
         display: none;
     }
 
-    .heroText{
-        align-items: center;
-        gap: 30px;
-    }
-
     .hero-container {
-        flex-direction: column;
+        grid-template-columns: 1fr 1fr;
     }
 
-    .heroBottom {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 100px 0 0 0;
+    .me {
+        min-width: 250px;
+        padding-right: 20px;
+    }
+    .heroText {
+        padding-left: 20px;
+    }
+}
+
+@media (max-width: 800px) {
+    .hero-container {
+        grid-template-columns: 1fr;
     }
     
 }
 
 @media (max-width: 450px) {
     .heroTextAnimation, .bold {
-        font-size: 2rem;
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .me {
+        padding: 0px 20px;
+    }
+
+    .showButtons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .showJob {
+        text-align: center;
+    }
+
+    .showHeroBottom {
+        display: none;
     }
 
     .bold {

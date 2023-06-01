@@ -1,0 +1,113 @@
+.projectsHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 900;
+    gap: 50px;
+    width: 100%;
+}
+
+.projectsTitle {
+    color: var(--textWhite);
+    font-size: 2em;
+    letter-spacing: .15em;
+}
+
+.projectsButtons {
+    display: flex;
+    gap: 100px;
+
+}
+
+
+.tabName > li.active {
+    cursor: pointer;
+    color: var(--textWhite);
+    font-size: 1.2em;
+    border-bottom: solid 4px var(--accentGreen);
+    text-align: center;
+    line-height: 50px;
+    width: fit-content;
+    transition: all 500ms;
+    list-style: none;
+    white-space: nowrap;
+}
+
+.tabName > li {
+    white-space: nowrap;
+    cursor: pointer;
+    color: var(--textWhite);
+    font-size: 1.2rem;
+    border-bottom: solid 4px transparent;
+    text-align: center;
+    line-height: 50px;
+    width: fit-content;
+    transition: all 500ms;
+    list-style: none;
+}
+
+.tabName >li::before {
+    content: '';
+}
+
+.tabName > li:hover {
+    width: fit-content;
+    border-bottom: solid 4px var(--accentGreen);
+    line-height: 50px;
+    transition: all 500ms;
+    color: var(--accentGreen);
+}
+
+
+
+.projectTabs{
+    position: relative;
+    background-color: var(--secondaryBlack);
+    height: 100%;
+    padding: 50px 75px 50px 75px;
+    object-fit: contain;
+    margin-left: 12vw;
+    margin-right: 12vw;
+    border-radius: 15px;
+}
+
+.tab {
+    white-space: nowrap;
+}
+
+@media (max-width:1000px) {
+    .projectTabs {
+        padding: 25px 50px 25px 50px;
+    }
+
+    .tabName > li {
+        font-size: 0.9em;
+    }
+
+    .tabName > li.active {
+        font-size: 0.9em;
+    }
+
+    .projectsButtons {
+        justify-content: space-between;
+        gap: 50px;
+    }
+}
+
+@media (max-width:450px) {
+    .tabName > li {
+        font-size: 0.7em;
+    }
+
+    .tabName > li.active {
+        font-size: 0.7em;
+    }
+
+    .projectsButtons {
+        justify-content: space-between;
+        gap: 50px;
+    }
+
+}
+
