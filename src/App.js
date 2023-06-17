@@ -5,8 +5,9 @@ import Hero from "./components/Hero";
 import AboutMe from "./components/AboutMe";
 import Footer from "./components/Footer";
 import { Projects } from "./components/Projects";
-import "./App.css";
 import TechStack from "./components/TechStack";
+import Team from "./components/Team";
+import "./App.css";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <AboutMe />
         <TechStack />
         <Projects />
+        <Team />
         <Contact />
       </main>
       <footer>

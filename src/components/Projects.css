@@ -59,6 +59,12 @@
     color: var(--accentGreen);
 }
 
+.projectHidden {
+    opacity: 0;
+    transform: translateY(100%);
+    filter: blur(25px);
+}
+
 
 
 .projectTabs{
@@ -70,6 +76,21 @@
     margin-left: 12vw;
     margin-right: 12vw;
     border-radius: 15px;
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.7s;
+    overflow: hidden;
+}
+
+.showTab {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.7s;
+}
+
+.hideTab {
+    opacity: 0;
+    transform: translateX(-100%);
 }
 
 .tab {
@@ -106,7 +127,7 @@
 
     .projectsButtons {
         justify-content: space-between;
-        gap: 50px;
+        gap: 30px;
     }
 
 }

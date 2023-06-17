@@ -9,6 +9,12 @@
 .coindashImg {
     min-width: 400px;
     width: 40%;
+    transition: all 1s;
+}
+
+.coindashImg:hover {
+    transform: scale(1.2);
+    transform: rotate(10deg);
 }
 
 .coindashLogo {
@@ -25,9 +31,14 @@
 .projectSpacer {
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     gap: 15px;
     width: 700px;
+}
+
+.dogwalker {
+    display: flex;
+    flex-direction: row-reverse;
 }
 
 /*PROJECT GAPS FOR MAIN SECTION*/
@@ -132,6 +143,10 @@
     .coindashImg {
         display: none;
     }
+    .dogwalker {
+        display: flex;
+
+    }
 
 }
 
@@ -168,6 +183,15 @@
 
     .coindashIphone {
         min-width: 300px;
+    }
+
+    .projectTitle {
+        font-size: 1em;
+    }
+
+    .dogwalker {
+        display: flex;
+
     }
 }
 

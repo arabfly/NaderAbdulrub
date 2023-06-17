@@ -4,6 +4,10 @@ import coindashIphone from "../assets/coindashIphone.png";
 import coindashLogo from "../assets/coindashLogo.png";
 import "./Coindash.css";
 
+const coindashDemo =
+  "https://647a9b8d5a670c2678c52c86--remarkable-bonbon-8f2dca.netlify.app/";
+const coindashCode = "https://github.com/nabdulrub/coindash";
+
 const Coindash = () => {
   return (
     <div className="projectContainer">
@@ -37,8 +41,12 @@ const Coindash = () => {
           </li>
         </div>
         <div className="projectButtons">
-          <button className="projectCode">View Code</button>
-          <button className="projectDemo">Demo</button>
+          <a href={coindashCode} target="_blank" rel="noreferrer">
+            <button className="projectCode">View Code</button>
+          </a>
+          <a href={coindashDemo} target="_blank" rel="noreferrer">
+            <button className="projectDemo">Demo</button>
+          </a>
         </div>
       </div>
     </div>

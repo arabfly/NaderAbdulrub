@@ -1,4 +1,3 @@
-import React from "react";
 const TabNavItem = ({ id, title, activeProject, setActiveProject }) => {
   const handleClick = () => {
     setActiveProject(id);
@@ -6,11 +5,7 @@ const TabNavItem = ({ id, title, activeProject, setActiveProject }) => {
 
   return (
     <div className="tabName">
-      <li
-        className="tab"
-        onClick={handleClick}
-        className={activeProject === id ? "active" : ""}
-      >
+      <li className="tab" onClick={handleClick}>
         {title}
       </li>
     </div>

@@ -34,7 +34,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: start;
+    align-items: flex-start;
     font-size: 18px;
 }
 
@@ -116,8 +116,6 @@
    display: flex;
    flex-wrap: nowrap;
    flex-direction: column;
-   width: 50%;
-   background-color: var(--secondaryBlack);
    padding: 40px;
    border-radius: 15px;
    align-items: center;
@@ -126,14 +124,15 @@
    overflow: hidden;
 }
 
-.contactRight > * {
-    white-space: nowrap;
-}
 
 .contactItems {
     display: flex;
     flex-direction: row;
     gap: 15px;
+}
+
+.animation {
+    width: 5vw;
 }
 
 .contactRightText {
@@ -183,12 +182,12 @@
 
     .wrapper {
         justify-content: center;
-        align-items: start;
+        align-items: flex-start;
     }
 
 
     .wrapper form {
-        align-items: start;
+        align-items: flex-start;
         justify-content: center;
     }
     

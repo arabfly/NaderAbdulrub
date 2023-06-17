@@ -3,11 +3,11 @@ import weatherapp from "../assets/weatherapp.png";
 
 const WeatherApp = () => {
   return (
-    <div className="projectContainer" style={{ flexDirection: "row-reverse" }}>
+    <div className="projectContainer">
       <img className="coindashImg" src={weatherapp} alt="coindash" />
       <div className="projectSpacer">
         <div className="projectHeader">
-          <h1 className="projectTitle">TEMPUS</h1>
+          <h1 className="projectTitle">TEMPUS - ( COMING SOON )</h1>
         </div>
         <p
           className="projectDescription"
@@ -15,24 +15,24 @@ const WeatherApp = () => {
             color: "#4a4be2",
           }}
         >
-          AI-Powered Weather & Style App
+          Weather Web App
         </p>
         <div className="projectList">
           <li>
-            Developed a real-time crypto web application using two APIs for data
-            and news updates.
+            Created a web application that allows users to easily search and
+            access current weather information for any city worldwide.
           </li>
           <li>
-            Implemented user-friendly filtering for personalized cryptocurrency
-            news feeds.
+            Integrated a weather API to retrieve accurate and up-to-date weather
+            data for the searched locations.
           </li>
           <li>
-            Designed an interactive line chart to track historical crypto
-            performance.
+            Implemented geolocation functionality to automatically detect and
+            display the weather in the user's current location.
           </li>
           <li>
-            Created a responsive and visually appealing user interface for
-            optimal user experience.
+            Designed an intuitive and visually appealing user interface for
+            seamless user experience.
           </li>
         </div>
         <div className="projectButtons">

@@ -3,6 +3,7 @@ import { Link } from "react-scroll";
 import { IoIosArrowDown } from "react-icons/io";
 import { GoLocation } from "react-icons/go";
 import { HiOutlineNewspaper } from "react-icons/hi";
+import { CgSoftwareDownload } from "react-icons/cg";
 import { BsLinkedin, BsGithub, BsInstagram, BsTwitter } from "react-icons/bs";
 import styled from "styled-components";
 import me from "../assets/nader.png";
@@ -10,6 +11,7 @@ import ReactIcon from "../assets/React.svg";
 import JavaScriptIcon from "../assets/javascript.svg";
 import HtmlIcon from "../assets/html.svg";
 import CssIcon from "../assets/css.svg";
+import myResume from "../assets/Nader_Abdulrub_Resume.pdf";
 import "./Hero.css";
 
 const Card = styled.div`
@@ -50,6 +52,13 @@ const Hero = () => {
     triggerOnce: true,
   });
 
+  const socials = {
+    linkedIn: "https://www.linkedin.com/in/nader-abdulrub-69205a192/",
+    twitter: "https://twitter.com/NAbdulrub",
+    github: "https://github.com/nabdulrub",
+    instagram: "https://www.instagram.com/naderabdulrub/",
+  };
+
   return (
     <div className="hero">
       <div className="hero-container">
@@ -69,12 +78,16 @@ const Hero = () => {
               ref={ButtonsRef}
               className={!ButtonsInView ? "hideButtons" : "showButtons"}
             >
-              <button type="button" className="heroProjectsButton">
-                Projects
-              </button>
-              <button type="button" className="heroResumeButton">
-                Resume
-              </button>
+              <Link to="projects" duration={800} smooth={true}>
+                <button type="button" className="heroProjectsButton">
+                  Projects
+                </button>
+              </Link>
+              <a href={myResume} download={myResume}>
+                <button type="button" className="heroResumeButton">
+                  Resume <CgSoftwareDownload className="resumeIcon" size={25} />
+                </button>
+              </a>
             </div>
           </div>
           <div
@@ -84,26 +97,22 @@ const Hero = () => {
             <h1 className="heroJob">Socials</h1>
             <div className="heroSocialsContainer">
               <div className="heroSocialsLinkedin">
-                <a
-                  href="https://www.linkedin.com/in/nader-abdulrub-69205a192/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
+                <a href={socials.linkedIn} target="_blank" rel="noreferrer">
                   <BsLinkedin size={30} />
                 </a>
               </div>
               <div className="heroSocialsGithub">
-                <a href="/" target="_blank" rel="noreferrer">
+                <a href={socials.github} target="_blank" rel="noreferrer">
                   <BsGithub size={30} />
                 </a>
               </div>
               <div className="heroSocialsInstagram">
-                <a href="/" target="_blank" rel="noreferrer">
+                <a href={socials.instagram} target="_blank" rel="noreferrer">
                   <BsInstagram size={30} />
                 </a>
               </div>
               <div className="heroSocialsTwitter">
-                <a href="/" target="_blank" rel="noreferrer">
+                <a href={socials.twitter} target="_blank" rel="noreferrer">
                   <BsTwitter size={30} />
                 </a>
               </div>
@@ -139,7 +148,9 @@ const Hero = () => {
                 <img className="CardIcon" src={HtmlIcon} alt="html" />
                 <img className="CardIcon" src={CssIcon} alt="css" />
               </div>
-              <button className="heroTechButton">VIEW ALL</button>
+              <Link to="stackContainer" duration={500} smooth={true}>
+                <button className="heroTechButton">VIEW ALL</button>
+              </Link>
             </Card>
           </div>
           <div
@@ -148,11 +159,22 @@ const Hero = () => {
           >
             <Card backgroundColor={"--buttonBlue"} gap={"10px"}>
               <h1 className="CardTitle">Projects</h1>
-              <div className="heroProject">
-                <h1 className="heroProjectTitle">COINDASH</h1>
-                <p className="heroProjectDescription">Cryptocurrency Web App</p>
-              </div>
-              <button className="heroProjectButton">MORE</button>
+              <Link
+                className="heroProject"
+                to="projects"
+                duration={500}
+                smooth={true}
+              >
+                <div>
+                  <h1 className="heroProjectTitle">COINDASH</h1>
+                  <p className="heroProjectDescription">
+                    Cryptocurrency Web App
+                  </p>
+                </div>
+              </Link>
+              <Link to="projects" duration={500} smooth={true}>
+                <button className="heroProjectButton">MORE</button>
+              </Link>
             </Card>
           </div>
           <div
@@ -170,13 +192,22 @@ const Hero = () => {
                 <p className="heroDegree">Bachelor's Degree</p>
                 <p className="heroMajor">Computer Information Systems</p>
               </div>
-              <button className="heroTechButton">VIEW DOCS</button>
+              <a href={socials.linkedIn} target="_blank" rel="noreferrer">
+                <button className="heroTechButton">VIEW MORE</button>
+              </a>
             </Card>
           </div>
         </div>
       </div>
     </div>
   );
+};
+
+export const socials = {
+  linkedIn: "https://www.linkedin.com/in/nader-abdulrub-69205a192/",
+  twitter: "https://twitter.com/NAbdulrub",
+  github: "https://github.com/nabdulrub",
+  instagram: "https://www.instagram.com/naderabdulrub/",
 };
 
 export default Hero;

@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-scroll";
+import { socials } from "./Hero";
 import { BsGithub, BsInstagram, BsLinkedin, BsTwitter } from "react-icons/bs";
 
 const FooterContainer = styled.div`
@@ -110,27 +111,39 @@ const Footer = () => {
             <Link to="nav-title" smooth={true} duration={700}>
               <MobileLinks>Home</MobileLinks>
             </Link>
-            <Link to="#" smooth={true} duration={700}>
+            <Link to="projects" smooth={true} duration={700}>
               <MobileLinks>Projects</MobileLinks>
             </Link>
-            <Link to="#" smooth={true} duration={700}>
+            <Link to="teamContainer" smooth={true} duration={700}>
               <MobileLinks>Team</MobileLinks>
             </Link>
-            <Link to="#" smooth={true} duration={700}>
+            <Link to="wrapper" smooth={true} duration={700}>
               <MobileLinks>Contact</MobileLinks>
             </Link>
           </MobileSection>
           <MobileSocials>
-            <MobileLinks>
+            <MobileLinks
+              href={socials.linkedIn}
+              target="_blank"
+              rel="noreferrer"
+            >
               <BsLinkedin size={30} />
             </MobileLinks>
-            <MobileLinks>
+            <MobileLinks href={socials.github} target="_blank" rel="noreferrer">
               <BsGithub size={30} />
             </MobileLinks>
-            <MobileLinks>
+            <MobileLinks
+              href={socials.twitter}
+              target="_blank"
+              rel="noreferrer"
+            >
               <BsTwitter size={30} />
             </MobileLinks>
-            <MobileLinks>
+            <MobileLinks
+              href={socials.instagram}
+              target="_blank"
+              rel="noreferrer"
+            >
               <BsInstagram size={30} />
             </MobileLinks>
           </MobileSocials>

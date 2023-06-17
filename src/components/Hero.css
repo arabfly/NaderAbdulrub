@@ -181,12 +181,14 @@
 
 }
 
+
+
 .heroText {
     margin-top: 75px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: start;
+    align-items: flex-start;
     gap: 100px;
 
 }
@@ -266,7 +268,7 @@
 
 .heroProjectsButton:hover {
     transition: ease-in-out 0.3s;
-    background-color: var(--textWhite);
+    background-color: black;
 }
 
 .heroResumeButton {
@@ -288,9 +290,9 @@
 }
 
 .heroResumeButton:hover {
-    background-color: var(--buttonBlue);
+    background-color: rgb(128 , 128, 128, .2);
     transition: ease-in-out 0.3s;
-    color: black;
+    color: white;
 }
 
 
@@ -311,7 +313,7 @@
     border-radius: 15px;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     justify-content: center;
     gap: 10px;
     opacity: 0;
@@ -327,7 +329,7 @@
     border-radius: 15px;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     justify-content: center;
     gap: 10px;
     transition: all 1s;
@@ -390,7 +392,7 @@
     margin-top: 10px;
     display: flex;
     gap: 10px;
-    align-items: end;
+    align-items: flex-end;
     font-size: 1.1rem;
 }
 
@@ -464,9 +466,6 @@ color: #962fbf  ;
     .me {
         min-width: 250px;
         padding-right: 20px;
-    }
-    .heroText {
-        padding-left: 20px;
     }
 }
 

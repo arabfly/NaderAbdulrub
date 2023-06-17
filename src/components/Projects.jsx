@@ -20,23 +20,19 @@ const ProjectsWrapper = styled.div`
 
 export const Projects = () => {
   const [activeProject, setActiveProject] = useState("tab1");
-  const { ref: coindashRef, inView: coindashInView } = useInView();
+  const { ref: containerRef, inView: containerInView } = useInView({
+    triggerOnce: true,
+  });
 
   return (
-    <ProjectsContainer>
+    <ProjectsContainer className="projects">
       <ProjectsWrapper>
         <div className="projectsHeader">
           <h1 className="projectsTitle">PROJECTS</h1>
-          <div className="projectsButtons">
+          <div className="projectsButtons" ref={containerRef}>
             <TabNavItem
               title="COINDASH"
               id="tab1"
-              activeProject={activeProject}
-              setActiveProject={setActiveProject}
-            />
-            <TabNavItem
-              title="WEATHER APP"
-              id="tab2"
               activeProject={activeProject}
               setActiveProject={setActiveProject}
             />
@@ -46,10 +42,16 @@ export const Projects = () => {
               activeProject={activeProject}
               setActiveProject={setActiveProject}
             />
+            <TabNavItem
+              title="WEATHER APP"
+              id="tab2"
+              activeProject={activeProject}
+              setActiveProject={setActiveProject}
+            />
           </div>
         </div>
       </ProjectsWrapper>
-      <div className="projectTabs">
+      <div className={containerInView ? "projectTabs" : "projectHidden"}>
         <TabContent id="tab1" activeProject={activeProject}>
           <Coindash />
         </TabContent>

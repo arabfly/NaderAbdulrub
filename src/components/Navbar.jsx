@@ -1,6 +1,7 @@
 import { React, useState } from "react";
 import { FaTimes } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { Link } from "react-scroll";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -30,16 +31,24 @@ const Navbar = () => {
       <nav>
         <ul className={click ? "nav-links active" : "nav-links"}>
           <li>
-            <a href="/">HOME</a>
+            <Link to="nav-title" smooth={true} duration={500}>
+              <a>HOME</a>
+            </Link>
           </li>
           <li>
-            <a href="/">PROJECTS</a>
+            <Link to="projects" smooth={true} duration={700}>
+              <a>PROJECTS</a>
+            </Link>
           </li>
           <li>
-            <a href="/">TEAM</a>
+            <Link to="teamContainer" smooth={true} duration={700}>
+              <a href="/">TEAM</a>
+            </Link>
           </li>
           <li>
-            <a href="/">CONTACT</a>
+            <Link to="wrapper" smooth={true} duration={700}>
+              <a href="/">CONTACT</a>
+            </Link>
           </li>
         </ul>
       </nav>

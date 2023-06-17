@@ -1,0 +1,87 @@
+.team {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    place-content: center;
+    place-items: center;
+    gap: 10vw;
+}
+
+.teamContainer {
+    display: flex;
+    flex-direction: column;
+    padding-right: 12%;
+    padding-left: 12%;
+    padding-top: 75px;
+    padding-bottom: 75px;
+    gap: 50px;
+    background-color: var(--secondaryBlack);
+}
+
+.teamTitle {
+    color: var(--textWhite);
+    font-size: 2em;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.teamCard {
+    
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    gap: 20px;
+    
+}
+
+.memberImgContainer {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.memberImg:hover {
+    transform: scale(1.2);
+}
+
+.memberImg {
+    width: 350px;
+    height: 350px;
+    border-radius: 40px;
+    padding: 30px;
+    object-fit: cover;
+    transition: all 0.3s;
+}
+
+.memberInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.memberInfo > h1{
+   color: var(--textWhite);
+   font-size: 1.5em;
+   font-weight: 900;
+}
+
+.memberInfo > h2{
+    color: var(--textWhite);
+    font-size: 1em;
+    font-weight: 100;
+ }
+
+ .memberSocials {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    color: white;
+    
+ }
+
+
+
+
+
