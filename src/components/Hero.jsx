@@ -62,7 +62,7 @@ const Hero = () => {
   return (
     <div className="hero">
       <div className="hero-container">
-        <div className="heroText">
+        <div className="heroText" ref={MyImageRef}>
           <div>
             <div
               className={!NameInView ? "heroNameContainer" : "showFadeIn"}
@@ -120,7 +120,6 @@ const Hero = () => {
           </div>
         </div>
         <div
-          ref={MyImageRef}
           className={
             !MyImageInView ? "heroMiddleContainer" : "showMiddleContainer"
           }
